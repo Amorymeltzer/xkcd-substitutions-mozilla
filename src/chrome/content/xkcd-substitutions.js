@@ -66,7 +66,7 @@
 	// Space
 	v = v.replace(/\b(S|s)pace/g, function(match, p1, offset, string) {
 	    s = String.fromCharCode(p1.charCodeAt(0) + 0);
-	    return s + "spaaace";
+	    return s + "paaace";
 	});
 
 	// Google Glass
@@ -160,4 +160,5 @@
 
     window.addEventListener('load', windowLoadHandler);
 }());
+
 
