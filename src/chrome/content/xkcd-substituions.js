@@ -32,16 +32,16 @@
     function handleText(textNode) {
 	var v = textNode.nodeValue;
 
-	// Witnessess
-	v = v.replace(/\b(W|w)itnesses/g, function(match, p1, offset, string) {
-	    d = String.fromCharCode(p1.charCodeAt(0) - 19);
-	    return d + "udes I know";
-	});
-
 	// Witness
 	v = v.replace(/\b(W|w)itness/g, function(match, p1, offset, string) {
 	    d = String.fromCharCode(p1.charCodeAt(0) - 19);
 	    return d + "ude I know";
+	});
+
+	// Witnessess
+	v = v.replace(/\b(W|w)itnesses/g, function(match, p1, offset, string) {
+	    d = String.fromCharCode(p1.charCodeAt(0) - 19);
+	    return d + "udes I know";
 	});
 
 	// Allegedly

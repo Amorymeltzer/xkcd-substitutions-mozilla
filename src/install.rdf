@@ -8,7 +8,7 @@
 
     <!-- Extension details -->
     <em:name>xkcd-substitutions</em:name>
-    <em:description>Make reading the news more fun!.</em:description>
+    <em:description>Make reading the news more fun!</em:description>
     <em:creator>Amory Meltzer forked from code by Steven Frank and Ioan Loosley</em:creator>
     <em:developer>Amory Meltzer</em:developer>
     <em:homepageURL>https://github.com/Amorymeltzer/xkcd-substitutions-mozilla/</em:homepageURL>
