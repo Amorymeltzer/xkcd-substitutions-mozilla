@@ -107,6 +107,14 @@
 	    return a + "tomic";
 	});
 
+	// a Senator
+	v = v.replace(/\b(A|a) (S|s)enator/g, function(match, p1, p2, offset, string) {
+	    a = String.fromCharCode(p1.charCodeAt(0) + 0);
+	    e = String.fromCharCode(p2.charCodeAt(0) - 14);
+	    l = String.fromCharCode(p2.charCodeAt(0) - 7);
+	    return a + "n " + e + "lf-" + l + "ord";
+	});
+
 	// Senator
 	v = v.replace(/\b(S|s)enator/g, function(match, p1, offset, string) {
 	    e = String.fromCharCode(p1.charCodeAt(0) - 14);
@@ -173,3 +181,4 @@
 
     window.addEventListener('load', windowLoadHandler);
 }());
+
