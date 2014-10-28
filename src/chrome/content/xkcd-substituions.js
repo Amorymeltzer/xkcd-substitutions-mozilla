@@ -77,7 +77,7 @@
 	});
 	// Electric
 	v = v.replace(/\b(E|e)lectric/g, function(match, p1, offset, string) {
-	     = String.fromCharCode(p1.charCodeAt(0) - 4);
+		= String.fromCharCode(p1.charCodeAt(0) - 4);
 	    return a + "tomic";
 	});
 	// Senator
@@ -98,13 +98,13 @@
 	    return e + "ating " + c + "ontest";
 	});
 	// Congressional leaders
-	v = v.replace(/\b(C|c)ongressional (L|l)eaders/g, function(match, p1, offset, string) {
+	v = v.replace(/\b(C|c)ongressional (L|l)eaders/g, function(match, p1, p2, offset, string) {
 	    r = String.fromCharCode(p1.charCodeAt(0) + 15);
 	    s = String.fromCharCode(p2.charCodeAt(0) + 7);
 	    return r + "iver " + s + "pirits";
 	});
 	// Homeland Security
-	v = v.replace(/\b(H|h)omeland (S|s)ecurity/g, function(match, p1, offset, string) {
+	v = v.replace(/\b(H|h)omeland (S|s)ecurity/g, function(match, p1, p2, offset, string) {
 	    h = String.fromCharCode(p1.charCodeAt(0) + 0);
 	    r = String.fromCharCode(p2.charCodeAt(0) - 1);
 	    return h + "omestar " + r + "unner";
@@ -141,23 +141,3 @@
 
     window.addEventListener('load', windowLoadHandler);
 }());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
