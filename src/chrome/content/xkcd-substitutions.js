@@ -57,16 +57,16 @@
 	    return t + "umblr " + p + "ost";
 	});
 
-	// Rebuild
-	v = v.replace(/\b(R|r)ebuild\b/g, function(match, p1, offset, string) {
-	    a = String.fromCharCode(p1.charCodeAt(0) - 17);
-	    return a + "venge";
-	});
-
 	// Rebuilding
 	v = v.replace(/\b(R|r)ebuilding/g, function(match, p1, offset, string) {
 	    a = String.fromCharCode(p1.charCodeAt(0) - 17);
 	    return a + "venging";
+	});
+
+	// Rebuild
+	v = v.replace(/\b(R|r)ebuild/g, function(match, p1, offset, string) {
+	    a = String.fromCharCode(p1.charCodeAt(0) - 17);
+	    return a + "venge";
 	});
 
 	// Space
@@ -136,10 +136,10 @@
 	});
 
 	// Congressional leaders
-	v = v.replace(/\b(C|c)ongressional (L|l)eaders/g, function(match, p1, p2, offset, string) {
+	v = v.replace(/\b(C|c)ongressional (L|l)eader/g, function(match, p1, p2, offset, string) {
 	    r = String.fromCharCode(p1.charCodeAt(0) + 15);
 	    s = String.fromCharCode(p2.charCodeAt(0) + 7);
-	    return r + "iver " + s + "pirits";
+	    return r + "iver " + s + "pirit";
 	});
 
 	// Homeland Security
