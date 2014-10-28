@@ -63,10 +63,23 @@
 	    return a + "venge";
 	});
 
+	// Rebuilding
+	v = v.replace(/\b(R|r)ebuilding/g, function(match, p1, offset, string) {
+	    a = String.fromCharCode(p1.charCodeAt(0) - 17);
+	    return a + "venging";
+	});
+
 	// Space
-	v = v.replace(/\b(S|s)pace/g, function(match, p1, offset, string) {
+	v = v.replace(/\b(S|s)pace\b/g, function(match, p1, offset, string) {
 	    s = String.fromCharCode(p1.charCodeAt(0) + 0);
 	    return s + "paaace";
+	});
+
+	// Google Glasses
+	v = v.replace(/\b(G|g)oogle (G|g)lasses/g, function(match, p1, p2, offset, string) {
+	    v = String.fromCharCode(p1.charCodeAt(0) + 15);
+	    b = String.fromCharCode(p2.charCodeAt(0) - 5);
+	    return v + "irtual " + b + "oys";
 	});
 
 	// Google Glass
@@ -160,5 +173,3 @@
 
     window.addEventListener('load', windowLoadHandler);
 }());
-
-
