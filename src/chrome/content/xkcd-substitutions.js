@@ -39,7 +39,7 @@
 	});
 
 	// Witness
-	v = v.replace(/\b(W|w)itness/g, function(match, p1, offset, string) {
+	v = v.replace(/\b(W|w)itness\b/g, function(match, p1, offset, string) {
 	    d = String.fromCharCode(p1.charCodeAt(0) - 19);
 	    return d + "ude I know";
 	});
@@ -58,7 +58,7 @@
 	});
 
 	// Rebuild
-	v = v.replace(/\b(R|r)ebuild/g, function(match, p1, offset, string) {
+	v = v.replace(/\b(R|r)ebuild\b/g, function(match, p1, offset, string) {
 	    a = String.fromCharCode(p1.charCodeAt(0) - 17);
 	    return a + "venge";
 	});
@@ -102,7 +102,7 @@
 	});
 
 	// Car
-	v = v.replace(/\b(C|c)ar/g, function(match, p1, offset, string) {
+	v = v.replace(/\b(C|c)ar\b/g, function(match, p1, offset, string) {
 	    c = String.fromCharCode(p1.charCodeAt(0) + 0);
 	    return c + "at";
 	});
@@ -160,3 +160,4 @@
 
     window.addEventListener('load', windowLoadHandler);
 }());
+
