@@ -32,16 +32,16 @@
     function handleText(textNode) {
 	var v = textNode.nodeValue;
 
-	// Witness
-	v = v.replace(/\b(W|w)itness/g, function(match, p1, offset, string) {
-	    d = String.fromCharCode(p1.charCodeAt(0) - 19);
-	    return d + "ude I know";
-	});
-
 	// Witnessess
 	v = v.replace(/\b(W|w)itnesses/g, function(match, p1, offset, string) {
 	    d = String.fromCharCode(p1.charCodeAt(0) - 19);
 	    return d + "udes I know";
+	});
+
+	// Witness
+	v = v.replace(/\b(W|w)itness/g, function(match, p1, offset, string) {
+	    d = String.fromCharCode(p1.charCodeAt(0) - 19);
+	    return d + "ude I know";
 	});
 
 	// Allegedly
@@ -71,9 +71,15 @@
 
 	// Google Glass
 	v = v.replace(/\b(G|g)oogle (G|g)lass/g, function(match, p1, p2, offset, string) {
-	    v = String.fromCharCode(p1.charCodeAt(0) - 15);
+	    v = String.fromCharCode(p1.charCodeAt(0) + 15);
 	    b = String.fromCharCode(p2.charCodeAt(0) - 5);
 	    return v + "irtual " + b + "oy";
+	});
+
+	// Smartphones
+	v = v.replace(/\b(S|s)martphones/g, function(match, p1, offset, string) {
+	    p = String.fromCharCode(p1.charCodeAt(0) - 3);
+	    return p + "okedexes";
 	});
 
 	// Smartphone
