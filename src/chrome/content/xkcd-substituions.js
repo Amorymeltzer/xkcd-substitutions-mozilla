@@ -84,7 +84,7 @@
 
 	// Electric
 	v = v.replace(/\b(E|e)lectric/g, function(match, p1, offset, string) {
-		= String.fromCharCode(p1.charCodeAt(0) - 4);
+	    a = String.fromCharCode(p1.charCodeAt(0) - 4);
 	    return a + "tomic";
 	});
 
